@@ -1,0 +1,18 @@
+{
+  "name": "generator-vstack",
+  "version": "0.1.0",
+  "description": "simple generator for vstack.",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Damian Dennis <damiandennis@gmail.com>",
+  "license": "ISC",
+  "files": [
+    "generators/app",
+    "generators/component",
+    "generators/addon"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.20.3"
+  }
+}

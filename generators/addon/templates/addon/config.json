@@ -1,0 +1,12 @@
+{
+  "name": "<%= name %>",
+  "title": "<%= model %>",
+  "type": "<%= type %>",
+  "priority": "<%= priority %>",
+  "data": {
+    "install": false,
+    "options": {
+
+    }
+  }
+}
