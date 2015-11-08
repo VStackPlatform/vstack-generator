@@ -9,12 +9,13 @@
 }(this, function(require) {
 
     var ko = require('knockout');
-    var mapping = require('ko-mapping');
     var Component = require('components/models/Component');
 
     var <%= model %> = Component.extend({
         init: function(params, componentInfo) {
-            mapping.fromJS(params, {}, this);
+            this._super();
+            this.defaults = {};
+            this.mapData(params, {}, this.defaults);
         }
     });
 
@@ -25,8 +26,9 @@
      * @returns {boolean} true if valid false otherwise.
      */
     <%= model %>.checkRequiredParams = function(params) {
-        var validated = true;
-        return validated;
+        return Component.validate({
+            "required": []
+        }, params, '<%= name %>');
     };
 
     return <%= model %>;
